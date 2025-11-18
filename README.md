@@ -41,4 +41,19 @@ This hashmap only handles string type keys. It dynamically expands as its size g
 ## Binary Search Tree
 [Project Instructions](https://www.theodinproject.com/lessons/javascript-binary-search-trees)
 
+Creates a balanced binary search tree given a number array, removing all duplicates from the array.
+
 **Class Functions**
+- `buildTree(data)` returns the level-0 root node with references to left and right children forming a balanced tree
+- `insert(value, startNode = this.root)`, inserts a node with the given value in the tree. `startNode` should generally be left empty to take the value of the root node.
+- `delete(value)` deletes a node with the given value from the tree
+- `find(value)` returns the node with the given value or null if the value is not found
+- `levelOrderForEach(callback, startNode = this.root)` traverses the tree in breadth-first level order and calls the callback function on each node as it traverses
+- `inOrderForEach(callback, startNode = this.root)` traverses the tree in inorder depth-first level order and calls the callback on each node as it traverses
+- `preOrderForEach(callback, startNode = this.root)` traverses the tree in preorder depth-first level order and calls the callback on each node as it traverses
+- `postOrderForEach(callback, startNode = this.root)` traverses the tree in postorder depth-first level order and calls the callback on each node as it traverses
+- `height(value)` returns the height of the specified value or null if the value if not found. Height is defined as the number of edges in the longest path from that node to a leaf node. A height of 0 means the specified value is a leaf node.
+- `depth(value)` returns the depth of the specified value or null if the value is not found. Depth is defined as the number of edges in the path from that node to the root node. A depth of 0 means the specified value is the root node.
+- `isBalanced()` checks if the tree is balanced. A binary tree is considered balanced if, for every node in the tree, the height difference between its left and right subtrees is no more than 1, and both the left and right subtrees are also balanced.
+- `rebalance()` rebalances an unbalanced tree. See `isBalanced()` function for a definition of balanced trees
+- `prettyPrint(node, prefix = "", isLeft = true)` prints the tree in the console
